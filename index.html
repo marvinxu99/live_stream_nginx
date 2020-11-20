@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Winn Live Stream</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS  -->
+	<link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
+
+	<style>
+		* {
+		  box-sizing: border-box;
+		  font-family: Arial, Helvetica, sans-serif;
+		}
+
+		body {
+		  margin: 0;
+		  font-family: Arial, Helvetica, sans-serif;
+		}
+
+		/* Style the top navigation bar */
+		.topnav {
+		  overflow: hidden;
+		  background-color: #333;
+		}
+
+		/* Style the topnav links */
+		.topnav a {
+		  float: left;
+		  display: block;
+		  color: #f2f2f2;
+		  font-size: 30px;
+                  font-weight: bold;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		/* Change color on hover */
+		.topnav a:hover {
+		  background-color: #ddd;
+		  color: black;
+		}
+
+		/* Style the content */
+		.content {
+		  background-color: #ddd;
+		  padding: 10px;
+		}
+
+		/* Style the footer */
+		.footer {
+		  background-color: #f1f1f1;
+		  padding: 10px;
+		}
+
+		.flex-container {
+		  display: flex;
+		  flex-wrap: wrap;
+		  flex-direction: row;
+		}
+
+		.flex-container > div {
+		  background-color: DodgerBlue;
+		  /* background-color: #f1f1f1; */
+		  margin: 10px;
+		  padding: 10px;
+		  font-size: 15px;
+		  flex: 40%;
+		}
+
+		/* Responsive layout - makes a one column layout instead of a two-column layout */
+		@media (max-width: 800px) {
+		  .flex-item-right, .flex-item-left {
+			flex: 10%;
+		  }
+		}
+
+
+	</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="#">Winter Winn Live Stream</a>
+</div>
+
+<div class="content">
+
+<div class="flex-container">
+  <div>
+    <p>Winn Live Strem #1</p>
+    <video id='winn-live1'  class="video-js vjs-default-skin" width="500" height="400" controls>
+	 <source type="application/x-mpegURL" src="/hls/stream.m3u8">
+    </video>
+    <!--
+    <a href="index2.html">Watch Live #2</a>
+    -->
+  </div>
+
+  <div>
+    <h5>Winn Live Strem #2</h5>
+    <video id='winn-live2'  class="video-js vjs-default-skin" width="500" height="400" controls>
+	 <source type="application/x-mpegURL" src="/hls2/stream2.m3u8">
+    </video>
+  </div>
+
+  <div>
+    <h5>Winn Live Strem #3</h5>
+    <video id='winn-live3'  class="video-js vjs-default-skin" width="500" height="400" controls>
+	 <source type="application/x-mpegURL" src="/hls3/stream3.m3u8">
+    </video>
+  </div>
+
+  <div>
+    <h5>Winn Live Strem #4</h5>
+    <video id='winn-live4'  class="video-js vjs-default-skin" width="500" height="400" controls>
+	 <source type="application/x-mpegURL" src="/hls4/stream4.m3u8">
+    </video>
+  </div>
+
+</div>
+
+
+
+
+</div>
+
+<div class="footer">
+  <p>Winter Winn Live Stream 24/7 support line: 778-winter1</p>
+</div>
+
+<!-- JS code -->
+<!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+<script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
+<script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+
+<script>
+	var player1 = videojs('winn-live1');
+	player1.play();
+
+	var player2 = videojs('winn-live2');
+	player2.play();
+
+	var player3 = videojs('winn-live3');
+	player3.play();
+
+	var player4 = videojs('winn-live4');
+	player4.play();
+
+</script>
+
+</body>
+</html>
+
